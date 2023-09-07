@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/back.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  width: 600px;
+  height: 400px;
+  background: #ffffff;
+  padding: 30px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.slider-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-items img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  /* opacity: 0; */
+  transform: scale(0);
+  transition: 0.4s;
+}
+
+.slider-items img.active{
+  transform: scale(1);
+  /* opacity: 1; */
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3px;
+}
+
+.arrows :is(.prev, .next) {
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.arrows :is(.prev, .next):hover {
+  background: aqua;
+  color: #000;
+}
+
+/* .arrows .prev,
+.arrows .next{
+} */
+
+.arrows ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.arrows ul li{
+  width: 13px;
+  height: 13px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrows ul li.active{
+  background: #000;
+}
